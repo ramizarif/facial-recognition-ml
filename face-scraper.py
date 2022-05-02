@@ -26,7 +26,7 @@ def getAllImages(url):
         if isUrlValid(img_url):
             urls.append(img_url)
             count+=1
-            if (count == 10):
+            if (count == 50):
                 break
     
     return urls
@@ -54,5 +54,6 @@ def main(url, path):
     imgs = getAllImages(url)
     for img in imgs: 
         download(img, path)
-main("https://louisville.edu/", "Images/scrapetest")
-    
+    print("done")
+
+main("https://www.pinterest.com/mvibes2/zendaya-faces/", "Images\Zendaya")
